@@ -21,9 +21,9 @@ For more options you can configure with environment variables refer to: [AWS Env
 
 ## NFS Mount
 
-To mount an NFS share to the ```/data``` folder inside the continer pass in the following environment variables:
+To mount an NFS share to the ```/data``` folder inside the container pass in the following environment variables:
 
-- ```NFS_MOUNT``` - the mount IP/hostame and path e.g. 10.0.0.11:/NFS
+- ```NFS_MOUNT``` - the mount IP/hostname and path e.g. 10.0.0.11:/NFS
 - ```NFS_OPTS``` - (optional) NFS options that will be added to the mount command-line e.g. ```-o ro``` would result in a mount command of ```mount.nfs4 -o ro 10.0.0.11:/NFS```
 
 ## AWS CLI S3 Command
@@ -33,7 +33,7 @@ the container changes into the ```/data``` folder using ```cd /data```.
 
 - ```AWS_CMD``` - [AWS S3 command options](https://docs.aws.amazon.com/cli/latest/reference/s3/index.html)
 
-The container will exit afterwards.
+The container will exit afterward.
 
 For example:
 

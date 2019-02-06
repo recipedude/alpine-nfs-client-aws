@@ -15,7 +15,9 @@ if [[ -z "${AWS_S3_CMD}" ]]; then
 else
 	cd /data
 	echo "Running: aws s3 $AWS_S3_CMD"
+	date
 	aws s3 $AWS_S3_CMD
 fi
 
 echo "finished"
+date
