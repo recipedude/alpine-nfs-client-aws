@@ -52,10 +52,20 @@ to mount NFS shares.
 You will need the ```CAP_SYS_ADMIN``` capability, which is stripped by Docker and Kubernets when it 
 creates the container. 
 
-### For Docker
+### Docker
 
 For Docker add the flag ```--cap-add sys_admin``` to your docker run command-line as thus:
 ```docker run -d --name nfs-client --cap-add sys_admin recipedude/alpine-nfs-client-aws:latest```
 
-### For Kubernetes
+### Kubernetes
+
+Add a ```securityContext``` stanza to add ```SYS_ADMIN``` priveleges. 
+
+```
+      containers:
+        - name: nfs-backup-aws
+          securityContext:
+            capabilities:
+              add: ["SYS_ADMIN"]
+```
 
