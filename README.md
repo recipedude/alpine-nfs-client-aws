@@ -1,6 +1,8 @@
 # alpine-nfs-client-aws
 NFS client + AWS CLI on Alpine docker image
 
+[![docker pulls](https://img.shields.io/docker/pulls/recipedude/alpine-nfs-client-aws.svg?style=plastic)](https://cloud.docker.com/u/recipedude/repository/docker/recipedude/alpine-nfs-client-aws)
+
 This docker image contains:
 
 - Alpine 3.8
