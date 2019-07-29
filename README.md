@@ -51,7 +51,7 @@ will [sync](https://docs.aws.amazon.com/cli/latest/reference/s3/sync.html) the N
 With Docker and, Kubernetes you will likely see an ```Operation not permitted``` error when trying 
 to mount NFS shares.
 
-You will need the ```CAP_SYS_ADMIN``` capability, which is stripped by Docker and Kubernets when it 
+You will need the ```CAP_SYS_ADMIN``` capability, which is stripped by Docker and Kubernetes when it 
 creates the container. 
 
 ### Docker
