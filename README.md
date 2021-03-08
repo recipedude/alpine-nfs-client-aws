@@ -25,7 +25,7 @@ For more options you can configure with environment variables refer to: [AWS Env
 
 To mount an NFS share to the ```/data``` folder inside the container pass in the following environment variables:
 
-- ```NFS_MOUNT``` - the mount IP/hostname and path e.g. 10.0.0.11:/NFS
+- ```NFS_SHARE``` - the mount IP/hostname and path e.g. 10.0.0.11:/NFS
 - ```NFS_OPTS``` - (optional) NFS options that will be added to the mount command-line e.g. ```-o ro``` would result in a mount command of ```mount.nfs4 -o ro 10.0.0.11:/NFS```
 
 ## AWS CLI S3 Command
@@ -71,3 +71,5 @@ Add a ```securityContext``` stanza to add ```SYS_ADMIN``` priveleges.
               add: ["SYS_ADMIN"]
 ```
 
+:warning:
+There are known DNS issues with Alpine images due to `musl`. See [Does Apline have known DNS issues within Kubernets](https://stackoverflow.com/questions/65181012/does-alpine-have-known-dns-issue-within-kubernetes) for more about this. 
